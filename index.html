@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Location Finder</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <h1>LOCATION FINDER</h1>
+  <div id="wrap">
+    <div id="map"></div>
+    <div id="box">
+      <label>Latitude</label>
+      <input class="ml-12" type="number"  step=any  id="latitude" value="38.5121156" required /> <br><br>
+      <label >Longitude</label>
+      <input type="number" step=any  id="longitude" value="27.026445" required />
+      <button onclick="initMap()" type="button">Find the Location</button>
+    </div>
+  </div>
+
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFLzx-8SYi6OBQHMA4KF14ChY_gD0NIn0
+&callback=initMap&v=weekly" async></script>
+</body>
+
+</html>
